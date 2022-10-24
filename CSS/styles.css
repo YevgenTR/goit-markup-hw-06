@@ -257,9 +257,13 @@ p {
   background-color: var(--blue-color);
   color: var(--white-color);
   font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
   border-radius: 4px;
   border-color: transparent;
   cursor: pointer;
+
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
@@ -408,7 +412,8 @@ p {
 }
 
 .team-block .list {
-  display: inline-flex;
+  padding: 0 32px;
+  justify-content: space-between;
 }
 
 .team-block .link {
@@ -420,9 +425,9 @@ p {
   border-radius: 50%;
 }
 
-.team-block .item:not(:last-child) {
+/* .team-block .item:not(:last-child) {
   margin-right: 10px;
-}
+} */
 
 .team .link {
   display: flex;
@@ -489,6 +494,9 @@ p {
 .filter-list {
   display: flex;
   justify-content: center;
+}
+
+.filter-list {
   margin-bottom: 50px;
 }
 
@@ -586,6 +594,8 @@ p {
   width: 100%;
   height: 100%;
   background-color: var(--card-background);
+
+  transition: transform;
   transform: translateY(100%);
   transform: translateY;
   transition-duration: var(--transition-duration);
@@ -638,10 +648,7 @@ p {
 .footer .container {
   display: flex;
   align-items: baseline;
-}
-
-.footer .adress {
-  margin-right: 70px;
+  justify-content: space-between;
 }
 
 .footer .logo {
@@ -732,13 +739,17 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+  visibility: visible;
   opacity: 1;
+  z-index: 1;
   background-color: var(--backdrop-background-color);
-  transition: opacity var(--transition-duration) var(--timing-function);
+  transition: opacity var(--transition-duration) var(--timing-function),
+    visibility var(--transition-duration) var(--timing-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -752,8 +763,7 @@ p {
   left: 50%;
   padding: 40px;
 
-  width: 528px;
-  min-height: 581px;
+  min-width: 528px;
 
   background-color: var(--main-background-color);
   transform: translate(-50%, -50%) scale(1);
@@ -783,9 +793,9 @@ p {
 }
 
 .modal .close-button:hover {
-  fill: #ffffff;
-  background-color: #2196f3;
-  /* fill: var(--accent-color); */
+  /* fill: #ffffff;
+  background-color: #2196f3; */
+  fill: var(--accent-color);
 }
 
 .modal .title {
@@ -796,4 +806,132 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+
+.modal .form {
+  justify-content: center;
+
+  align-items: center;
+}
+
+.form .field {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 10px;
+  /* outline: 1px solid red; */
+}
+
+.field .label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.field .input {
+  position: relative;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.field .icon {
+  position: absolute;
+}
+.field .textarea {
+  height: 120px;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+
+.textarea placeholder {
+  font-size: 40px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color-50);
+}
+
+.polisy .link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.modal .button-container {
+  text-align: center;
+}
+
+.modal .polisy {
+  margin-bottom: 30px;
+}
+
+.modal .button {
+  /* display: block; */
+  padding: 10px 52px;
+
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  border-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-form .form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-form .title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.footer-form .button {
+  display: flex;
+  align-items: center;
+  padding: 10px 28px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.footer-form .icon {
+  margin-left: 10px;
+}
+
+.footer-form .input {
+  margin-right: 10px;
+  padding-left: 10px;
+  color: white;
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 4px;
 }
