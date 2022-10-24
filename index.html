@@ -410,7 +410,7 @@
     <!-- Footer adress -->
     <footer class="footer">
       <div class="container">
-        <div class="adress">
+        <div class="contacts">
           <a class="logo" href="./index.html"
             >Web<span class="logo-white">Studio</span></a
           >
@@ -480,7 +480,7 @@
             <!-- <label for="E-mail" class="label">E-mail</label> -->
 
             <input type="text" id="E-mail" class="input" placeholder="E-mail" />
-            <button type="button" class="button">
+            <button type="submitt" class="button">
               Підписатися
               <svg class="icon" width="24" height="24">
                 <use href="./images/icons/icons.svg#icon-send"></use>
@@ -500,25 +500,34 @@
         </button>
         <h2 class="title">Залиште свої дані, ми вам передзвонимо</h2>
         <form action="" class="form">
-          <label class="field">
-            <span class="label">Ім'я</span>
-            <input type="text" class="input" />
-            <svg class="icon" width="11px" height="11px">
-              <use href="./images/icons/icons.svg#icon-close"></use>
-            </svg>
-          </label>
+          <div class="field">
+            <label for="name" class="label">Ім'я</label>
+            <div class="input-box">
+              <input type="tell" id="name" class="input" />
+              <svg class="icon" width="18px" height="18px">
+                <use href="./images/icons/icons.svg#icon-person-modal"></use>
+              </svg>
+            </div>
+          </div>
 
           <div class="field">
             <label for="tell" class="label">Телефон</label>
-            <input type="tell" id="tell" class="input" />
-            <svg class="icon" width="11px" height="11px">
-              <use href="./images/icons/icons.svg#icon-close"></use>
-            </svg>
+            <div class="input-box">
+              <input type="tell" id="tell" class="input" />
+              <svg class="icon" width="18px" height="18px">
+                <use href="./images/icons/icons.svg#icon-phone-modal"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="field">
             <label for="email" class="label">Пошта</label>
-            <input type="email" id="email" class="input" />
+            <div class="input-box">
+              <input type="tell" id="email" class="input" />
+              <svg class="icon" width="18px" height="18px">
+                <use href="./images/icons/icons.svg#icon-email-modal"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="field">
