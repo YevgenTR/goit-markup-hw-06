@@ -768,7 +768,8 @@ p {
   left: 50%;
   padding: 40px;
 
-  min-width: 528px;
+  width: 528px;
+  height: 581px;
 
   background-color: var(--main-background-color);
   transform: translate(-50%, -50%) scale(1);
@@ -830,11 +831,15 @@ p {
   /* outline: 1px solid red; */
 }
 
+.form .field:nth-child(4) {
+  margin-bottom: 20px;
+}
+
 .field .label {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
 }
@@ -845,8 +850,9 @@ p {
 
 .field .input {
   width: 100%;
+  padding: 10px 0 10px 42px;
 
-  padding: 12px 0 12px 42px;
+  line-height: 1.125;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition-property: border-color;
@@ -963,8 +969,9 @@ p {
 }
 
 .modal .button {
-  /* display: block; */
+  display: block;
   padding: 10px 52px;
+  margin: 0 auto;
 
   background-color: var(--blue-color);
   color: var(--white-color);
@@ -973,6 +980,7 @@ p {
   line-height: 1.87;
   border-color: transparent;
   cursor: pointer;
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

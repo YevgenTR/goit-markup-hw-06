@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./modern-normalize.css" />
-    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
 
     <title>Студія</title>
   </head>
@@ -476,7 +476,7 @@
         <!-- footer form -->
         <div class="footer-form">
           <p class="title">Підпишіться на розсилку</p>
-          <form action="" class="form">
+          <form class="form">
             <!-- <label for="E-mail" class="label">E-mail</label> -->
 
             <input
@@ -486,7 +486,7 @@
               placeholder="E-mail"
               name="user-email"
             />
-            <button type="submitt" class="button">
+            <button type="submit" class="button">
               Підписатися
               <svg class="icon" width="24" height="24">
                 <use href="./images/icons/icons.svg#icon-send"></use>
@@ -504,12 +504,12 @@
             <use href="./images/icons/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <h2 class="title">Залиште свої дані, ми вам передзвонимо</h2>
+        <p class="title">Залиште свої дані, ми вам передзвонимо</p>
         <form class="form" autocomplete="off" name="feedback-form">
           <div class="field">
             <label for="name" class="label">Ім'я</label>
             <div class="input-box">
-              <input id="name" type="tell" class="input" name="user-name" />
+              <input id="name" type="text" class="input" name="user-name" />
               <svg class="icon" width="18px" height="18px">
                 <use href="./images/icons/icons.svg#icon-person-modal"></use>
               </svg>
@@ -519,7 +519,7 @@
           <div class="field">
             <label for="tell" class="label">Телефон</label>
             <div class="input-box">
-              <input type="tell" id="tell" class="input" name="user-phone" />
+              <input type="tel" id="tell" class="input" name="user-phone" />
               <svg class="icon" width="18px" height="18px">
                 <use href="./images/icons/icons.svg#icon-phone-modal"></use>
               </svg>
@@ -529,7 +529,7 @@
           <div class="field">
             <label for="email" class="label">Пошта</label>
             <div class="input-box">
-              <input type="tell" id="email" class="input" name="user-email" />
+              <input type="email" id="email" class="input" name="user-email" />
               <svg class="icon" width="18px" height="18px">
                 <use href="./images/icons/icons.svg#icon-email-modal"></use>
               </svg>
@@ -537,14 +537,13 @@
           </div>
 
           <div class="field">
-            <label for="comment" class="label" name="comment">Коментар</label>
+            <label for="comment" class="label">Коментар</label>
             <textarea
               name="textarea"
               id="comment"
               cols="30"
               rows="10"
               class="textarea"
-              name="comment"
               placeholder="Введіть текст"
             ></textarea>
           </div>
@@ -555,17 +554,13 @@
                 id="checkbox"
                 class="checkbox visually-hidden"
                 name="checkbox"
-                name="user-agreement"
               />
               <span class="icon"></span>
               Погоджуюся з розсилкою та приймаю
             </label>
             <a href="" class="link">Умови договору</a>
           </div>
-
-          <div class="button-container">
-            <button class="button">Відправити</button>
-          </div>
+          <button class="button">Відправити</button>
         </form>
       </div>
     </div>
